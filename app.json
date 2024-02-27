@@ -1,13 +1,13 @@
 {
   "expo": {
     "name": "AgriVision",
-    "slug": "AgriVision",
+    "slug": "agrivision",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/Logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.agro.agrivision"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/Logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b8e757c0-319a-46aa-b126-e162c342483a"
+      }
+    },
+    "owner": "spgiradkar"
   }
 }

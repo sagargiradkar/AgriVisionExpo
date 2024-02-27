@@ -1,12 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const Address = () => {
   return (
-    <View>
-      <Text>Address</Text>
+    <View style={styles.container}>
+      <Text style={styles.addressText}>Address</Text>
     </View>
-  )
+  );
 }
 
-export default Address
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  addressText: {
+    color: 'black',
+    fontWeight: 'bold',
+  },
+});
+
+export default Address;

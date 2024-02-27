@@ -46,12 +46,12 @@ const DrawerNavigation = () => {
                             fontWeight: "bold",
                             color: COLORS.black,
                             marginBottom: 6
-                        }}>Isabella Joanna</Text>
+                        }}>Sagar Giradkar</Text>
                         <Text style={{
                             fontSize: 16,
                             color: COLORS.black
 
-                        }}>Product Designer</Text>
+                        }}>Farmer</Text>
                     </View>
                     <DrawerItemList {...props} />
                 </SafeAreaView>
