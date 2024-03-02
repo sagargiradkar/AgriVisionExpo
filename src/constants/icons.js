@@ -17,7 +17,9 @@ const more = require("../assets/icons/more.png");
 const calendar = require("../assets/icons/calendar.png");
 const calendarOutline = require("../assets/icons/calendar-outline.png");
 const community = require("../assets/icons/community.png");
-const communityOutline = require("../assets/icons/community-outline.png")
+const communityOutline = require("../assets/icons/community-outline.png");
+const croppractice = require("../assets/icons/crop-practice.png");
+const croppracticeOutline = require("../assets/icons/crop-practice-outline.png");
 export default {
     bell,
     bellOutline,
@@ -37,5 +39,7 @@ export default {
     calendar,
     calendarOutline,
     community,
-    communityOutline
+    communityOutline,
+    croppractice,
+    croppracticeOutline
 }

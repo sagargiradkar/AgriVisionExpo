@@ -30,7 +30,7 @@ const DrawerNavigation = () => {
                         width: "100%",
                         justifyContent: "center",
                         alignItems: "center",
-                        backgroundColor: COLORS.white
+                        backgroundColor: COLORS.mint
                     }}>
                         <Image
                           source={images.avatar}
@@ -60,11 +60,11 @@ const DrawerNavigation = () => {
       }
       screenOptions={{
         drawerStyle: {
-          backgroundColor: COLORS.white,
+          backgroundColor: COLORS.mint,
           width: 250,
         },
         headerStyle: {
-          backgroundColor: COLORS.white,
+          backgroundColor: COLORS.mint,
         },
         headerShown: false,
         headerTintColor: COLORS.black,

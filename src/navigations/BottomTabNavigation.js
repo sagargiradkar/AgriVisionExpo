@@ -1,9 +1,9 @@
-import { View, Text, Image, Platform } from "react-native";
+import { Image, Platform } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, Community, Orders, Search,Calendar } from "../screens";
 import { COLORS, icons } from "../constants";
-import { Ionicons } from "@expo/vector-icons";
+import CropPractice from "../screens/CropPractice";
 
 const Tab = createBottomTabNavigator();
 
@@ -63,30 +63,20 @@ const BottomTabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={Search}
+        name="Crop Care"
+        component={CropPractice}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <View
+              <Image
+                source={focused ? icons.croppractice : icons.croppracticeOutline}
+                resizeMode="contain"
                 style={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                  backgroundColor: COLORS.primary,
-                  height: Platform.OS === "ios" ? 70 : 60,
-                  width: Platform.OS === "ios" ? 70 : 60,
-                  top: Platform.OS === "ios" ? -20 : -30,
-                  borderRadius: Platform.OS === "ios" ? 35 : 30,
-                  borderWidth: 2,
-                  borderColor: COLORS.white,
+                  height: 25,
+                  width: 25,
+                  tintColor: focused ? COLORS.primary : COLORS.black,
                 }}
-              >
-                <Ionicons
-                  name="search-outline"
-                  size={24}
-                  color={COLORS.white}
-                />
-              </View>
+              />
             );
           },
         }}

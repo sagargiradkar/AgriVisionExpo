@@ -5,7 +5,7 @@ import { COLORS } from "../constants";
 import Header from "../components/Header";
 import BottomSheet from "../components/BottomSheet";
 
-const Search = () => {
+const CropPractice = () => {
   const refRBSheet = useRef()
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -19,4 +19,4 @@ const Search = () => {
 }
 
 
-export default Search;
+export default CropPractice;
