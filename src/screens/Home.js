@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <View style={{ flex: 1 }}>
+      <View>
         <Header title="Home" onPress={() => refRBSheet.current.open()} />
         {/* FlatList for displaying banners */}
         <View style={styles.container}>
@@ -93,7 +93,7 @@ const Home = () => {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: COLORS.gray,
+    backgroundColor: COLORS.mint,
   },
   container: {
     marginTop: 8,

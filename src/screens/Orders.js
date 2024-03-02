@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View,StyleSheet } from "react-native";
 import React ,{useRef} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS } from "../constants";
@@ -8,13 +8,18 @@ import BottomSheet from "../components/BottomSheet";
 const Orders = () => {
   const refRBSheet = useRef()
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
-      <View style={{ flex: 1, backgroundColor: COLORS.white }}>
+    <SafeAreaView style={styles.mainContainer}>
+      <View>
         <Header title="Shop"  onPress={()=>refRBSheet.current.open()} />
       </View>
       <BottomSheet bottomSheetRef={refRBSheet} />
     </SafeAreaView>
   );
 };
-
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    backgroundColor: COLORS.gray,
+  },
+});
 export default Orders;
