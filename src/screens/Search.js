@@ -1,24 +1,22 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View } from "react-native";
+import React, {useRef} from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { COLORS } from "../constants";
+import Header from "../components/Header";
+import BottomSheet from "../components/BottomSheet";
 
 const Search = () => {
+  const refRBSheet = useRef()
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Search</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+      <View style={{ flex: 1, backgroundColor: COLORS.white }}>
+        <Header title="Search"  onPress={()=>refRBSheet.current.open()} />
+      </View>
+      <BottomSheet bottomSheetRef={refRBSheet} />
+    </SafeAreaView>
+    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: 'black',
-    fontWeight: 'bold',
-  },
-});
 
 export default Search;

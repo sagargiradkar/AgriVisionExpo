@@ -42,16 +42,15 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        marginTop: 20,
-        marginHorizontal: 16
+        marginTop: 25,
+        backgroundColor: COLORS.white 
     },
     iconContainer: {
         height: 45,
         width: 45,
-        borderRadius: 999,
+        borderRadius: 8,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: COLORS.gray
     },
     icon: {
         height: 24,

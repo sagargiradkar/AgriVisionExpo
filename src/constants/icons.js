@@ -1,4 +1,5 @@
 const bell = require("../assets/icons/bell.png");
+import Calendar from './../screens/Calendar';
 const bellOutline = require("../assets/icons/bell-outline.png");
 const chat = require("../assets/icons/chat.png");
 const chatOutline = require("../assets/icons/chat-outline.png");
@@ -13,7 +14,10 @@ const userOutline = require("../assets/icons/user-outline.png");
 const menu = require("../assets/icons/menu.png");
 const arrowLeft = require("../assets/icons/arrow-left.png");
 const more = require("../assets/icons/more.png");
-
+const calendar = require("../assets/icons/calendar.png");
+const calendarOutline = require("../assets/icons/calendar-outline.png");
+const community = require("../assets/icons/community.png");
+const communityOutline = require("../assets/icons/community-outline.png")
 export default {
     bell,
     bellOutline,
@@ -29,5 +33,9 @@ export default {
     userOutline,
     menu,
     arrowLeft,
-    more
+    more,
+    calendar,
+    calendarOutline,
+    community,
+    communityOutline
 }

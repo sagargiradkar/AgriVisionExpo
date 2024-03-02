@@ -1,7 +1,7 @@
 import { View, Text, Image, Platform } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Message, Orders, Profile, Search } from "../screens";
+import { Home, Community, Orders, Search,Calendar } from "../screens";
 import { COLORS, icons } from "../constants";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -93,8 +93,28 @@ const BottomTabNavigation = () => {
       />
 
       <Tab.Screen
-        name="Message"
-        component={Message}
+        name="Calendar"
+        component={Calendar}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={focused ? icons.calendar : icons.calendarOutline}
+                resizeMode="contain"
+                style={{
+                  height: 24,
+                  width: 24,
+                  tintColor: focused ? COLORS.primary : COLORS.black,
+                }}
+              />
+            );
+          },
+        }}
+      />
+
+        <Tab.Screen
+        name=" Community"
+        component={Community}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
@@ -111,25 +131,7 @@ const BottomTabNavigation = () => {
           },
         }}
       />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <Image
-                source={focused ? icons.user : icons.userOutline}
-                resizeMode="contain"
-                style={{
-                  height: 24,
-                  width: 24,
-                  tintColor: focused ? COLORS.primary : COLORS.black,
-                }}
-              />
-            );
-          },
-        }}
-      />
+      
     </Tab.Navigator>
   );
 };

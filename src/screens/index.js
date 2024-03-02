@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Message from "./Message";
+import Community from "./Community";
 import Orders from "./Orders";
 import Profile from "./Profile";
 import Search from "./Search";
@@ -8,10 +8,10 @@ import Notifications from "./Notifications";
 import Faqs from "./Faqs";
 import Favourite from "./Favourite";
 import PaymentMethod from "./PaymentMethod";
+import Calendar from './Calendar';
 
 export {
     Home,
-    Message,
     Orders,
     Profile,
     Search,
@@ -19,5 +19,7 @@ export {
     Notifications,
     Faqs,
     Favourite,
-    PaymentMethod
+    PaymentMethod,
+    Community,
+    Calendar
 }
