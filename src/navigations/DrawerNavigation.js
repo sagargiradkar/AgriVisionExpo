@@ -33,7 +33,7 @@ const DrawerNavigation = () => {
                         backgroundColor: COLORS.mint
                     }}>
                         <Image
-                          source={images.avatar}
+                          source={images.profile}
                           style={{
                             height: 100,
                             width: 100,

@@ -1,5 +1,4 @@
 const bell = require("../assets/icons/bell.png");
-import Calendar from './../screens/Calendar';
 const bellOutline = require("../assets/icons/bell-outline.png");
 const chat = require("../assets/icons/chat.png");
 const chatOutline = require("../assets/icons/chat-outline.png");

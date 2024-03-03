@@ -11,7 +11,7 @@ import {
 import { COLORS } from "../constants";
 import Header from "../components/Header";
 import BottomSheet from "../components/BottomSheet";
-
+import Dashboard from "./Dashboard";
 const { width } = Dimensions.get("window");
 
 const Home = () => {
@@ -85,6 +85,7 @@ const Home = () => {
           </View>
         </View>
       </View>
+      <Dashboard />
       <BottomSheet bottomSheetRef={refRBSheet} />
     </SafeAreaView>
   );
@@ -110,11 +111,11 @@ const styles = StyleSheet.create({
   pagination: {
     flexDirection: "row",
     position: "absolute",
-    bottom: 0,
+    bottom: -1,
     alignSelf: "center",
   },
   dot: {
-    width: 20,
+    width: 10,
     height: 10,
     borderRadius: 4,
     backgroundColor: COLORS.gray,

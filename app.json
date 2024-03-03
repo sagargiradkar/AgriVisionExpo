@@ -22,7 +22,7 @@
         "foregroundImage": "./src/assets/AgriVisionAppLogo.png",
         "backgroundColor": "#CDFADC"
       },
-      "package": "com.agro.agrivision"
+      "package": "com.agrovision.agri"
     },
     "web": {
       "favicon": "./src/assets/AgriVisionAppLogo.png"

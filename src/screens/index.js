@@ -8,18 +8,18 @@ import Notifications from "./Notifications";
 import Faqs from "./Faqs";
 import Favourite from "./Favourite";
 import PaymentMethod from "./PaymentMethod";
-import Calendar from './Calendar';
+import Calendar from "./Calendar";
 
 export {
-    Home,
-    Orders,
-    Profile,
-    Search,
-    Address,
-    Notifications,
-    Faqs,
-    Favourite,
-    PaymentMethod,
-    Community,
-    Calendar
-}
+  Home,
+  Orders,
+  Profile,
+  Search,
+  Address,
+  Notifications,
+  Faqs,
+  Favourite,
+  PaymentMethod,
+  Community,
+  Calendar,
+};

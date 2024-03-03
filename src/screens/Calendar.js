@@ -1,11 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   View,
-  Text,
   SafeAreaView,
-  FlatList,
   StyleSheet,
-  Image,
+
   Dimensions,
 } from "react-native";
 import { COLORS } from "../constants";
