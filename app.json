@@ -4,7 +4,7 @@
     "slug": "agrivision",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/AgriVisionAppLogo.png",
+    "icon": "./src/assets/Free Farm Logo Vector - Agriculture Logo Template (2) (1).png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./src/assets/AgriVisionSpashScreen.png",
@@ -25,7 +25,7 @@
       "package": "com.agro.agrivision"
     },
     "web": {
-      "favicon": "./src/assets/AgriVisionAppLogo.png"
+      "favicon": "./src/assets/Free Farm Logo Vector - Agriculture Logo Template (2) (1).png"
     },
     "extra": {
       "eas": {
