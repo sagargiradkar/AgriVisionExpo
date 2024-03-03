@@ -13,89 +13,90 @@ import Header from "../components/Header";
 import BottomSheet from "../components/BottomSheet";
 
 // Sample data for crops with categories
-const cropsData = [
+const cropsData =[
   {
     "category": "Spices",
     "crops": [
-      { "id": 1, "name": "Black Pepper", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Cinnamon", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Turmeric", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Ginger", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Cloves", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Black Pepper", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Cinnamon", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Turmeric", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Ginger", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Cloves", "image": require("../assets/images/allevo vera.png") },
+      { "id": 6, "name": "Black Pepper", "image": require("../assets/images/avatar.png") },
     ]
   },
   {
     "category": "Medicinal",
     "crops": [
-      { "id": 1, "name": "Aloe Vera", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Stevia", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Ginseng", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Echinacea", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Lavender", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Aloe Vera", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Stevia", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Ginseng", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Echinacea", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Lavender", "image": require("../assets/images/allevo vera.png") }
     ]
   },
   {
     "category": "Aromatic",
     "crops": [
-      { "id": 1, "name": "Rose", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Jasmine", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Patchouli", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Sandalwood", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Lemon Balm", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Rose", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Jasmine", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Patchouli", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Sandalwood", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Lemon Balm", "image": require("../assets/images/allevo vera.png") }
     ]
   },
   {
     "category": "Pulses",
     "crops": [
-      { "id": 1, "name": "Chickpeas", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Lentils", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Black Beans", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Green Peas", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Kidney Beans", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Chickpeas", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Lentils", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Black Beans", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Green Peas", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Kidney Beans", "image": require("../assets/images/allevo vera.png") }
     ]
   },
   {
     "category": "Cereals",
     "crops": [
-      { "id": 1, "name": "Rice", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Wheat", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Maize", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Barley", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Oats", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Rice", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Wheat", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Maize", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Barley", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Oats", "image": require("../assets/images/allevo vera.png") }
     ]
   },
   {
     "category": "Oils",
     "crops": [
-      { "id": 1, "name": "Olive", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Coconut", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Palm", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Soybean", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Sunflower", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Olive", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Coconut", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Palm", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Soybean", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Sunflower", "image": require("../assets/images/allevo vera.png") }
     ]
   },
   {
     "category": "Plantation",
     "crops": [
-      { "id": 1, "name": "Tea", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Coffee", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Cocoa", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Rubber", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Coconut", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Tea", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Coffee", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Cocoa", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Rubber", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Coconut", "image": require("../assets/images/allevo vera.png") }
     ]
   },
   {
     "category": "Cash Crop",
     "crops": [
-      { "id": 1, "name": "Cotton", "image": "../assets/images/avatar.png" },
-      { "id": 2, "name": "Sugarcane", "image": "../assets/images/cinnamon.png" },
-      { "id": 3, "name": "Tobacco", "image": "../assets/images/termeric.png" },
-      { "id": 4, "name": "Coffee", "image": "../assets/images/Ginger.png" },
-      { "id": 5, "name": "Cocoa", "image": "../assets/images/allevo vera.png" }
+      { "id": 1, "name": "Cotton", "image": require("../assets/images/avatar.png") },
+      { "id": 2, "name": "Sugarcane", "image": require("../assets/images/cinnamon.png") },
+      { "id": 3, "name": "Tobacco", "image": require("../assets/images/termeric.png") },
+      { "id": 4, "name": "Coffee", "image": require("../assets/images/Ginger.png") },
+      { "id": 5, "name": "Cocoa", "image": require("../assets/images/allevo vera.png") }
     ]
   }
 ]
-
+;
 const CropPractice = () => {
   const refRBSheet = useRef();
   const [searchQuery, setSearchQuery] = useState("");
@@ -235,7 +236,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: COLORS.gray,
+    borderColor: "#000000",
   },
 });
 

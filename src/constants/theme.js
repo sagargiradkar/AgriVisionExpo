@@ -6,7 +6,9 @@ export const COLORS = {
     white: "#FFFFFF",
     gray: "#ECF0F4",
     darkgray:"#B4B4B8",
-    mint:"#CDFADC"
+    mint:"#CDFADC",
+    red: "#FF0000",
+  black: "#000000"
 }
 
 export const SIZES = {

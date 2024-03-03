@@ -46,17 +46,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    margin: 5,
+    margin: 10,
     borderRadius: 10,
     backgroundColor: "#ffffff",
     shadowColor: "#000000",
     shadowOffset: {
-      width: 0,
-      height: 2,
+      width: 2,
+      height: 5,
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    height:110
   },
   icon: {
     fontSize: 30,

@@ -85,6 +85,7 @@ const Home = () => {
           </View>
         </View>
       </View>
+      
       <Dashboard />
       <BottomSheet bottomSheetRef={refRBSheet} />
     </SafeAreaView>
