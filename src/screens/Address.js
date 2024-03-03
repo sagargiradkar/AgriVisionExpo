@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
     width: width - 33,
     height: 200,
     marginHorizontal: 10,
-     borderRadius:10,
-     gap:10,
+    borderRadius: 10,
+    gap: 10,
     resizeMode: "cover",
   },
   pagination: {
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Address ;
+export default Address;

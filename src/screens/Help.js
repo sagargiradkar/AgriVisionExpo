@@ -14,7 +14,7 @@ import BottomSheet from "../components/BottomSheet";
 
 const { width } = Dimensions.get("window");
 
-const Profile = () => {
+const Help = () => {
   const refRBSheet = useRef();
 
   return (
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profile;
+export default Help;

@@ -91,7 +91,7 @@ const Community = () => {
       comments: [],
     },
   ]);
-  
+
   const handleLike = (postId) => {
     setPosts((prevPosts) =>
       prevPosts.map((post) =>
@@ -162,13 +162,14 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: COLORS.mint,
+    marginBottom: "19%",
   },
   postContainer: {
     backgroundColor: COLORS.white,
-    borderRadius: 10,
-    padding: 10,
-    marginBottom: 10,
-    flexDirection: "row",
+    borderRadius: 5,
+    padding: "2%",
+    marginBottom: "8%",
+    marginHorizontal: 10,
     alignItems: "center",
   },
   postContentContainer: {
@@ -176,20 +177,24 @@ const styles = StyleSheet.create({
   },
   postContent: {
     fontSize: 16,
-    marginBottom: 10,
+    marginBottom: 5,
+    borderRadius:5
   },
   postImage: {
-    width: width - 180,
-    height: 120,
+    width: width - 90,
+    height: 200,
     borderRadius: 10,
-    resizeMode: "cover",
+    borderColor:COLORS.black,
+    resizeMode: "contain",
   },
   postActionsContainer: {
     flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "space-evenly", // This will space the items evenly
+    alignItems: "center", // You may want to adjust this based on your layout requirements
   },
   actionIcon: {
-    marginHorizontal: 10,
+    marginTop:10,
+    marginHorizontal: 60,
   },
 });
 

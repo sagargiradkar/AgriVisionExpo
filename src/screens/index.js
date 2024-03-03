@@ -9,7 +9,9 @@ import Faqs from "./Faqs";
 import Favourite from "./Favourite";
 import PaymentMethod from "./PaymentMethod";
 import Calendar from "./Calendar";
-
+import Login from './Login';
+import Signup from './Signup';
+import Help from './Help'
 export {
   Home,
   Orders,
@@ -22,4 +24,7 @@ export {
   PaymentMethod,
   Community,
   Calendar,
+  Login,
+  Signup,
+  Help,
 };

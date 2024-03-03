@@ -1,12 +1,17 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
-import { DrawerItemList, createDrawerNavigator } from "@react-navigation/drawer";
+import {
+  DrawerItemList,
+  createDrawerNavigator,
+} from "@react-navigation/drawer";
 import { COLORS, images } from "../constants";
 import { Ionicons, AntDesign, Feather } from "@expo/vector-icons";
 import BottomTabNavigation from "./BottomTabNavigation";
 import {
   Address,
   Favourite,
+  Help,
+  Login,
   Notifications,
   Orders,
   PaymentMethod,
@@ -20,44 +25,50 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
-
-      drawerContent={
-        (props)=>{
-            return (
-                <SafeAreaView>
-                    <View style={{
-                        height: 200,
-                        width: "100%",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backgroundColor: COLORS.mint
-                    }}>
-                        <Image
-                          source={images.profile}
-                          style={{
-                            height: 100,
-                            width: 100,
-                            borderRadius: 50,
-                            marginBottom: 12
-                          }}
-                        />
-                        <Text style={{
-                            fontSize: 18,
-                            fontWeight: "bold",
-                            color: COLORS.black,
-                            marginBottom: 6
-                        }}>Sagar Giradkar</Text>
-                        <Text style={{
-                            fontSize: 16,
-                            color: COLORS.black
-
-                        }}>Farmer</Text>
-                    </View>
-                    <DrawerItemList {...props} />
-                </SafeAreaView>
-            )
-        }
-      }
+      drawerContent={(props) => {
+        return (
+          <SafeAreaView>
+            <View
+              style={{
+                height: 200,
+                width: "100%",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: COLORS.mint,
+              }}
+            >
+              <Image
+                source={images.profile}
+                style={{
+                  height: 100,
+                  width: 100,
+                  borderRadius: 50,
+                  marginBottom: 12,
+                }}
+              />
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: "bold",
+                  color: COLORS.black,
+                  marginBottom: 6,
+                }}
+              >
+                Sagar Giradkar
+              </Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: COLORS.black,
+                }}
+              >
+                Farmer
+              </Text>
+            </View>
+            <DrawerItemList {...props} />
+          </SafeAreaView>
+        );
+      }}
       screenOptions={{
         drawerStyle: {
           backgroundColor: COLORS.mint,
@@ -173,7 +184,19 @@ const DrawerNavigation = () => {
             <Feather name="help-circle" size={24} color={COLORS.black} />
           ),
         }}
-        component={Profile}
+        component={Help}
+      />
+      <Drawer.Screen
+        name="Logout"
+        options={{
+          drawerLabel: "Logout",
+          title: "Logout",
+          headerShadowVisible: false,
+          drawerIcon: ({ color, size }) => (
+            <Feather name="log-out" size={size} color={color} />
+          ),
+        }}
+        component={Login}
       />
     </Drawer.Navigator>
   );

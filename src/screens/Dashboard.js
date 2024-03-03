@@ -4,14 +4,14 @@ import { COLORS } from "../constants";
 
 const Dashboard = () => {
   const data = [
-    { id: 1, title: "Profile", icon: "👤" },
+    // { id: 1, title: "Profile", icon: "👤" },
     { id: 2, title: "Crop Practice", icon: "🌱" },
     { id: 3, title: "Weather", icon: "☁️" },
     { id: 4, title: "Crop Care", icon: "🌾" },
     { id: 5, title: "Progress", icon: "📈" },
     { id: 6, title: "Videos", icon: "🎥" },
-    { id: 7, title: "Marketplace", icon: "🛒" },
-    { id: 8, title: "News", icon: "📰" },
+    // { id: 7, title: "Marketplace", icon: "🛒" },
+    // { id: 8, title: "News", icon: "📰" },
     { id: 9, title: "Crop Advisory", icon: "🌱" },
   ];
 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    height:110
+    height: 110,
   },
   icon: {
     fontSize: 30,

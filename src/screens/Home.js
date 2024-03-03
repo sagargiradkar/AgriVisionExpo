@@ -12,6 +12,7 @@ import { COLORS } from "../constants";
 import Header from "../components/Header";
 import BottomSheet from "../components/BottomSheet";
 import Dashboard from "./Dashboard";
+import Background from "../components/Background";
 const { width } = Dimensions.get("window");
 
 const Home = () => {
@@ -85,7 +86,7 @@ const Home = () => {
           </View>
         </View>
       </View>
-      
+
       <Dashboard />
       <BottomSheet bottomSheetRef={refRBSheet} />
     </SafeAreaView>
@@ -105,8 +106,8 @@ const styles = StyleSheet.create({
     width: width - 33,
     height: 200,
     marginHorizontal: 10,
-     borderRadius:10,
-     gap:10,
+    borderRadius: 10,
+    gap: 10,
     resizeMode: "cover",
   },
   pagination: {

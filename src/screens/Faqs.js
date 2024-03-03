@@ -20,7 +20,10 @@ const Faqs = () => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View>
-        <Header title="Frequently Asked Questions" onPress={() => refRBSheet.current.open()} />
+        <Header
+          title="Frequently Asked Questions"
+          onPress={() => refRBSheet.current.open()}
+        />
       </View>
       <BottomSheet bottomSheetRef={refRBSheet} />
     </SafeAreaView>
@@ -40,8 +43,8 @@ const styles = StyleSheet.create({
     width: width - 33,
     height: 200,
     marginHorizontal: 10,
-     borderRadius:10,
-     gap:10,
+    borderRadius: 10,
+    gap: 10,
     resizeMode: "cover",
   },
   pagination: {
@@ -63,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Faqs ;
+export default Faqs;

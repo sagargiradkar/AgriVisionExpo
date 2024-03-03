@@ -1,7 +1,7 @@
 import { Image, Platform } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Community, Orders, Search,Calendar } from "../screens";
+import { Home, Community, Orders, Search, Calendar } from "../screens";
 import { COLORS, icons } from "../constants";
 import CropPractice from "../screens/CropPractice";
 
@@ -69,7 +69,9 @@ const BottomTabNavigation = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <Image
-                source={focused ? icons.croppractice : icons.croppracticeOutline}
+                source={
+                  focused ? icons.croppractice : icons.croppracticeOutline
+                }
                 resizeMode="contain"
                 style={{
                   height: 25,
@@ -102,7 +104,7 @@ const BottomTabNavigation = () => {
         }}
       />
 
-        <Tab.Screen
+      <Tab.Screen
         name=" Community"
         component={Community}
         options={{
@@ -121,7 +123,6 @@ const BottomTabNavigation = () => {
           },
         }}
       />
-      
     </Tab.Navigator>
   );
 };

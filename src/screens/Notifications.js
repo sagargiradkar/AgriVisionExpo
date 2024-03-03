@@ -1,13 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  FlatList,
-  StyleSheet,
-  Image,
-  Dimensions,
-} from "react-native";
+import React, { useRef } from "react";
+import { View, Text, SafeAreaView, StyleSheet, Dimensions } from "react-native";
 import { COLORS } from "../constants";
 import Header from "../components/Header";
 import BottomSheet from "../components/BottomSheet";
@@ -20,7 +12,10 @@ const Notification = () => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View>
-        <Header title="Notification" onPress={() => refRBSheet.current.open()} />
+        <Header
+          title="Notification"
+          onPress={() => refRBSheet.current.open()}
+        />
       </View>
       <BottomSheet bottomSheetRef={refRBSheet} />
     </SafeAreaView>
@@ -40,8 +35,8 @@ const styles = StyleSheet.create({
     width: width - 33,
     height: 200,
     marginHorizontal: 10,
-     borderRadius:10,
-     gap:10,
+    borderRadius: 10,
+    gap: 10,
     resizeMode: "cover",
   },
   pagination: {
@@ -63,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Notification ;
+export default Notification;
