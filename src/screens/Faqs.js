@@ -1,24 +1,66 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useRef, useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  FlatList,
+  StyleSheet,
+  Image,
+  Dimensions,
+} from "react-native";
+import { COLORS } from "../constants";
+import Header from "../components/Header";
+import BottomSheet from "../components/BottomSheet";
+
+const { width } = Dimensions.get("window");
 
 const Faqs = () => {
+  const refRBSheet = useRef();
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.faqsText}>Faqs</Text>
-    </View>
+    <SafeAreaView style={styles.mainContainer}>
+      <View>
+        <Header title="Frequently Asked Questions" onPress={() => refRBSheet.current.open()} />
+      </View>
+      <BottomSheet bottomSheetRef={refRBSheet} />
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: COLORS.mint,
   },
-  faqsText: {
-    color: 'black',
-    fontWeight: 'bold',
+  container: {
+    marginTop: 8,
+    marginHorizontal: 10,
+  },
+  bannerImage: {
+    width: width - 33,
+    height: 200,
+    marginHorizontal: 10,
+     borderRadius:10,
+     gap:10,
+    resizeMode: "cover",
+  },
+  pagination: {
+    flexDirection: "row",
+    position: "absolute",
+    bottom: 0,
+    alignSelf: "center",
+  },
+  dot: {
+    width: 20,
+    height: 10,
+    borderRadius: 4,
+    backgroundColor: COLORS.gray,
+    margin: 5,
+    marginTop: 10,
+  },
+  activeDot: {
+    backgroundColor: COLORS.darkgray,
   },
 });
 
-export default Faqs;
+export default Faqs ;
