@@ -4,10 +4,10 @@
     "slug": "agrivision",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/AgriVision.png",
+    "icon": "./src/assets/AgriVisionAppLogo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./src/assets/AgriVision.png",
+      "image": "./src/assets/AgriVisionSpashScreen.png",
       "resizeMode": "contain",
       "backgroundColor": "#CDFADC"
     },
@@ -19,13 +19,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/AgriVision.png",
+        "foregroundImage": "./src/assets/AgriVisionSpashScreen.png",
         "backgroundColor": "#CDFADC"
       },
       "package": "com.agro.agrivision"
     },
     "web": {
-      "favicon": "./src/assets/AgriVision.png"
+      "favicon": "./src/assets/AgriVisionAppLogo.png"
     },
     "extra": {
       "eas": {

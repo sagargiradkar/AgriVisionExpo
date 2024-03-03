@@ -19,7 +19,6 @@ const Header = ({ title, onPress }) => {
                 />
             </TouchableOpacity>
             <Text style={{
-              marginTop:25,
                 marginLeft: 12,
                 fontSize: 17,
                 fontWeight: 'bold'
@@ -47,7 +46,6 @@ const styles = StyleSheet.create({
         padding:2
     },
     iconContainer: {
-      marginTop:25,
         height: 45,
         width: 45,
         borderRadius: 8,
