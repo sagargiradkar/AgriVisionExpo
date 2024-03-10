@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS, icons } from "../constants";
-
+import { Ionicons } from "@expo/vector-icons";
 const Header = ({ title, onPress }) => {
   const navigation = useNavigation();
 
@@ -25,9 +25,14 @@ const Header = ({ title, onPress }) => {
           {title}
         </Text>
       </View>
+      <View  style={styles.Container1}>
+      <TouchableOpacity onPress={onPress}>
+        <Ionicons name="notifications-outline" size={24} color={COLORS.black} />
+      </TouchableOpacity>
       <TouchableOpacity onPress={onPress} style={styles.iconContainer}>
         <Image resizeMode="contain" style={styles.icon} source={icons.more} />
       </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -39,6 +44,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: COLORS.white,
     padding: 2,
+  },
+  Container1: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: COLORS.white,
+    padding: 2,
+    gap:10
   },
   iconContainer: {
     height: 35, // Decreased height for the header

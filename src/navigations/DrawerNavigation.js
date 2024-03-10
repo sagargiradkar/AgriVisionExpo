@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, ToastAndroid } from "react-native";
+import { View, Text, Image, TouchableOpacity,} from "react-native";
 import {
   DrawerItemList,
   createDrawerNavigator,
@@ -10,6 +10,7 @@ import BottomTabNavigation from "./BottomTabNavigation";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   Address,
+  Faqs,
   Favourite,
   Help,
   Notifications,
@@ -177,7 +178,7 @@ const DrawerNavigation = () => {
         }}
         component={PaymentMethod}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="Notifications"
         options={{
           drawerLabel: "Notifications",
@@ -192,6 +193,22 @@ const DrawerNavigation = () => {
           ),
         }}
         component={Notifications}
+      /> */}
+      <Drawer.Screen
+        name="FAQ"
+        options={{
+          drawerLabel: "FAQ",
+          title: "FAQ",
+          headerShadowVisible: false,
+          drawerIcon: () => (
+            <Ionicons
+              name="filter-circle"
+              size={24}
+              color={COLORS.black}
+            />
+          ),
+        }}
+        component={Faqs}
       />
       <Drawer.Screen
         name="Help"
