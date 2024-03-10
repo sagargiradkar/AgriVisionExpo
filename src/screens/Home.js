@@ -7,7 +7,9 @@ import {
   StyleSheet,
   Image,
   Dimensions,
+  TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Import useNavigation hook
 import { COLORS } from "../constants";
 import Header from "../components/Header";
 import BottomSheet from "../components/BottomSheet";
@@ -27,8 +29,18 @@ const Home = () => {
 
   // Render item for FlatList
   const renderBannerItem = ({ item }) => (
-    <Image source={item.image} style={[styles.bannerImage]} />
+    <TouchableOpacity onPress={navigateToScreen}>
+      <Image source={item.image} style={[styles.bannerImage]} />
+    </TouchableOpacity>
   );
+
+  // Use useNavigation hook to get access to the navigation object
+  const navigation = useNavigation();
+
+  // Function to navigate to the desired screen
+  const navigateToScreen = () => {
+    navigation.navigate("Advertisement"); // Replace "YourScreenName" with the name of the screen you want to navigate to
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {

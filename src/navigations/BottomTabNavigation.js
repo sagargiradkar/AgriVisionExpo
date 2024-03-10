@@ -60,7 +60,7 @@ const BottomTabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Crop Care"
+        name="Crop Practice"
         component={CropPractice}
         options={{
           tabBarIcon: ({ focused }) => (

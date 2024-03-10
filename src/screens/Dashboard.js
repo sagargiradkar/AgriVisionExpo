@@ -1,26 +1,39 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Import useNavigation hook
 import { COLORS } from "../constants";
 
 const Dashboard = () => {
+  const navigation = useNavigation(); // Use useNavigation hook to get access to the navigation object
+
   const data = [
-    // { id: 1, title: "Profile", icon: "👤" },
-    { id: 2, title: "Crop Practice", icon: "🌱" },
-    { id: 3, title: "Weather", icon: "☁️" },
-    { id: 4, title: "Crop Care", icon: "🌾" },
-    { id: 5, title: "Progress", icon: "📈" },
-    { id: 6, title: "Videos", icon: "🎥" },
-    // { id: 7, title: "Marketplace", icon: "🛒" },
-    // { id: 8, title: "News", icon: "📰" },
-    { id: 9, title: "Crop Advisory", icon: "🌱" },
+    { id: 1, title: "Crop Care", icon: "🌾" },
+    { id: 2, title: "Weather", icon: "☁️" },
+    { id: 3, title: "Marketplace", icon: "🛒" },
+    { id: 4, title: "Progress", icon: "📈" },
+    { id: 5, title: "Videos", icon: "🎥" },
+    { id: 6, title: "Crop Advisory", icon: "🌱" },
   ];
+
+  const navigateToScreen = (screenName) => {
+    navigation.navigate(screenName); // Navigate to the desired screen
+  };
 
   const renderCard = ({ item }) => {
     return (
-      <View style={styles.card}>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigateToScreen(item.title)} // Pass the screen name as a parameter
+      >
         <Text style={styles.icon}>{item.icon}</Text>
         <Text style={styles.title}>{item.title}</Text>
-      </View>
+      </TouchableOpacity>
     );
   };
 

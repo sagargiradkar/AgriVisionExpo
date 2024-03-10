@@ -11,6 +11,14 @@ import { Address } from "../screens";
 import Background from "../components/Background";
 import { View,Text, } from "react-native";
 import { StackActions } from '@react-navigation/native';
+import Advertisement from "../screens/Advertisement";
+import CropPractice from "../screens/CropPractice";
+import WeatherScreen from "../screens/WeatherScreen";
+import CropCareScreen from "../screens/CropCareScreen";
+import ProgressScreen from "../screens/ProgressScreen";
+import VideosScreen from "../screens/VideosScreen";
+import CropAdvisoryScreen from "../screens/CropAdvisoryScreen";
+import MarketplaceScreen from "../screens/MarketplaceScreen";
 const Stack = createNativeStackNavigator();
 
 function SplashScreen({ navigation }) {
@@ -67,7 +75,15 @@ const AppNavigation = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Address" component={Address} />
         <Stack.Screen name="Profile" component={Profile} />
-
+        <Stack.Screen name="Advertisement" component={Advertisement} />
+        <Stack.Screen name="Crop Practice" component={CropPractice} />
+      <Stack.Screen name="Weather" component={WeatherScreen} />
+      <Stack.Screen name="Crop Care" component={CropCareScreen} />
+      <Stack.Screen name="Progress" component={ProgressScreen} />
+      <Stack.Screen name="Videos" component={VideosScreen} />
+      <Stack.Screen name="Crop Advisory" component={CropAdvisoryScreen} />
+      <Stack.Screen name="Marketplace" component={MarketplaceScreen} />
+     
       </Stack.Navigator>
     </NavigationContainer>
   );
