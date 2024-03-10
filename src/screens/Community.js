@@ -162,13 +162,13 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: COLORS.mint,
-    marginBottom: "19%",
+    marginBottom: "13%",
   },
   postContainer: {
     backgroundColor: COLORS.white,
     borderRadius: 5,
     padding: "2%",
-    marginBottom: "8%",
+    marginBottom: "6%",
     marginHorizontal: 10,
     alignItems: "center",
   },
@@ -195,6 +195,7 @@ const styles = StyleSheet.create({
   actionIcon: {
     marginTop:10,
     marginHorizontal: 60,
+    marginBottom:"5%",
   },
 });
 

@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Background from "../components/Background";
 import Btn from "../components/Btn";
 import { COLORS } from "../constants/theme";
 import Field from "../components/Field";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ToastAndroid } from "react-native";
 
 const Login = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const saveCredentials = async () => {
+    try {
+      await AsyncStorage.setItem("email", email);
+      await AsyncStorage.setItem("password", password);
+    } catch (error) {
+      console.error("Error saving credentials:", error);
+    }
+  };
+
+  const handleLogin = () => {
+    // Validate email and password here if needed
+    // Save credentials to AsyncStorage
+    saveCredentials();
+    // Navigate to main screen
+    props.navigation.navigate("Main");
+
+    // Display a toast message
+    ToastAndroid.show("Login Successful", ToastAndroid.SHORT);
+  };
   return (
     <Background>
       <View style={{ alignItems: "center", width: 400 }}>
@@ -29,7 +53,13 @@ const Login = (props) => {
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 40, color: COLORS.darkGreen, fontWeight: "bold" }}>
+          <Text
+            style={{
+              fontSize: 40,
+              color: COLORS.darkGreen,
+              fontWeight: "bold",
+            }}
+          >
             Welcome Back
           </Text>
           <Text
@@ -45,8 +75,13 @@ const Login = (props) => {
           <Field
             placeholder="Email / Username"
             keyboardType={"email-address"}
+            onChangeText={(text) => setEmail(text)}
           />
-          <Field placeholder="Password" secureTextEntry={true} />
+          <Field
+            placeholder="Password"
+            secureTextEntry={true}
+            onChangeText={(text) => setPassword(text)}
+          />
           <View
             style={{
               alignItems: "center",
@@ -59,12 +94,15 @@ const Login = (props) => {
               textColor="white"
               bgColor={COLORS.darkGreen}
               btnLabel="Login"
-              Press={() => {
-                alert('Login Succesffully');
-                props.navigation.navigate('Main');}}
+              Press={handleLogin}
             />
             <Text
-              style={{ color: COLORS.darkGreen, fontWeight: "bold", fontSize: 16,paddingLeft: "35%", }}
+              style={{
+                color: COLORS.darkGreen,
+                fontWeight: "bold",
+                fontSize: 16,
+                paddingLeft: "35%",
+              }}
             >
               Forgot Password ?
             </Text>
@@ -84,7 +122,11 @@ const Login = (props) => {
               onPress={() => props.navigation.navigate("Signup")}
             >
               <Text
-                style={{ color: COLORS.darkGreen, fontWeight: "bold", fontSize: 16 }}
+                style={{
+                  color: COLORS.darkGreen,
+                  fontWeight: "bold",
+                  fontSize: 16,
+                }}
               >
                 Signup
               </Text>

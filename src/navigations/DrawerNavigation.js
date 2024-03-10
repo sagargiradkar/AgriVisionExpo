@@ -1,5 +1,5 @@
-import { View, Text, Image } from "react-native";
 import React from "react";
+import { View, Text, Image, TouchableOpacity, ToastAndroid } from "react-native";
 import {
   DrawerItemList,
   createDrawerNavigator,
@@ -7,19 +7,17 @@ import {
 import { COLORS, images } from "../constants";
 import { Ionicons, AntDesign, Feather } from "@expo/vector-icons";
 import BottomTabNavigation from "./BottomTabNavigation";
+import { SafeAreaView } from "react-native-safe-area-context";
 import {
   Address,
   Favourite,
   Help,
-  Login,
   Notifications,
   Orders,
   PaymentMethod,
   Profile,
   Search,
 } from "../screens";
-import { SafeAreaView } from "react-native-safe-area-context";
-
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
@@ -28,43 +26,64 @@ const DrawerNavigation = () => {
       drawerContent={(props) => {
         return (
           <SafeAreaView>
-            <View
-              style={{
-                height: 200,
-                width: "100%",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: COLORS.mint,
-              }}
-            >
-              <Image
-                source={images.profile}
+            <TouchableOpacity onPress={() => { props.navigation.navigate("Profile");}}>
+              <View
                 style={{
-                  height: 100,
-                  width: 100,
-                  borderRadius: 50,
-                  marginBottom: 12,
-                }}
-              />
-              <Text
-                style={{
-                  fontSize: 18,
-                  fontWeight: "bold",
-                  color: COLORS.black,
-                  marginBottom: 6,
+                  flexDirection: "row",
+                  alignItems: "center",
+                  paddingVertical: 20,
+                  paddingHorizontal: 10,
+                  backgroundColor: COLORS.mint,
                 }}
               >
-                Sagar Giradkar
-              </Text>
-              <Text
-                style={{
-                  fontSize: 16,
-                  color: COLORS.black,
-                }}
-              >
-                Farmer
-              </Text>
-            </View>
+                {/* First Column */}
+                <View style={{ marginRight: 20 }}>
+                  <Image
+                    source={images.profile}
+                    style={{
+                      height: 50,
+                      width: 50,
+                      borderRadius: 50,
+                      marginBottom: 12,
+                    }}
+                  />
+                </View>
+
+                {/* Second Column */}
+                <View style={{ flex: 1 }}>
+                  <View>
+                    <Text
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "bold",
+                        color: COLORS.black,
+                        marginBottom: 0,
+                      }}
+                    >
+                      Sagar Giradkar
+                    </Text>
+                    <Text style={{ fontSize: 14, color: COLORS.black }}>
+                      +91 9168801192
+                    </Text>
+                  </View>
+
+                  {/* Button */}
+                  <TouchableOpacity
+                    style={{
+                      backgroundColor: COLORS.darkgray,
+                      width: 50,
+                      borderRadius: 5,
+                      height: 20,
+                      alignItems: "center",
+                    }}
+                  >
+                    <Text style={{ color: COLORS.black }}>Basic</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </TouchableOpacity>
+
+            {/* Drawer items */}
             <DrawerItemList {...props} />
           </SafeAreaView>
         );
@@ -186,18 +205,26 @@ const DrawerNavigation = () => {
         }}
         component={Help}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="Logout"
         options={{
           drawerLabel: "Logout",
           title: "Logout",
           headerShadowVisible: false,
-          drawerIcon: ({ color, size }) => (
-            <Feather name="log-out" size={size} color={color} />
+          drawerIcon: () => (
+            <Feather name="log-out" size={24} color={COLORS.black} />
           ),
         }}
         component={Login}
-      />
+        listeners={{
+          tabPress: (e) => {
+            // Prevent default action
+            e.preventDefault();
+            // Execute the logout function
+            handleLogout();
+          },
+        }}
+      /> */}
     </Drawer.Navigator>
   );
 };

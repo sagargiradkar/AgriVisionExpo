@@ -1,10 +1,15 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, ToastAndroid } from "react-native";
 import Background from "../components/Background";
 import Btn from "../components/Btn";
 import { COLORS, darkGreen } from "../constants/theme";
 import Field from "../components/Field";
+
 const Signup = (props) => {
+  const showToast = () => {
+    ToastAndroid.show("User account created successfully", ToastAndroid.SHORT);
+  };
+
   return (
     <Background>
       <View style={{ alignItems: "center", width: 460 }}>
@@ -38,13 +43,10 @@ const Signup = (props) => {
             alignItems: "center",
           }}
         >
-          {/* <Field placeholder="First Name" />
-          <Field placeholder="Last Name" /> */}
           <Field
             placeholder="Email / Username"
             keyboardType={"email-address"}
           />
-          {/* <Field placeholder="Contact Number" keyboardType={"number"} /> */}
           <Field placeholder="Password" secureTextEntry={true} />
           <Field placeholder="Confirm Password" secureTextEntry={true} />
           <View
@@ -91,7 +93,7 @@ const Signup = (props) => {
             bgColor={COLORS.darkGreen}
             btnLabel="Signup"
             Press={() => {
-              alert("User account created successfully !");
+              showToast();
               props.navigation.navigate("Main");
             }}
           />

@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     padding: 2,
   },
   iconContainer: {
-    height: 45,
-    width: 45,
+    height: 35, // Decreased height for the header
+    width: 35,
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
@@ -53,4 +53,5 @@ const styles = StyleSheet.create({
     tintColor: COLORS.black,
   },
 });
+
 export default Header;
